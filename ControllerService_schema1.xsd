@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://controller.test.sta.com/" xmlns:tns="http://controller.test.sta.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="testMethod" type="tns:testMethod"/>
+
+  <xs:element name="testMethodResponse" type="tns:testMethodResponse"/>
+
+  <xs:complexType name="testMethod">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:argument" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="testMethodResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="argument">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FIRST"/>
+      <xs:enumeration value="SECOND"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
